@@ -9,9 +9,7 @@ class Myhash:
 
     def remove(self, x):
         i = x % self.bucket
-        if x in self.table[i]:
-            self.table[i].remove(x)
-        
+        self.table[i].remove(x)
 
     def search(self, x):
         i = x % self.bucket
@@ -26,4 +24,3 @@ ob.insert(72)
 print(ob.search(9))
 ob.remove(9)
 print(ob.search(9))
-ob.remove(9)
