@@ -1,29 +1,29 @@
-class Myhash:
+class hashing:
     def __init__(self, b):
-        self.bucket = b
-        self.table = [[] for x in range(b)]
+        self.branch = b
+        self.table = [[] for i in range(b)]
 
-    def insert(self, x):
-        i = x % self.bucket
-        self.table[i].append(x)
+    def insert(self, ele):
+        i = ele % self.branch
+        self.table[i].append(ele)
 
-    def remove(self, x):
-        i = x % self.bucket
-        if x in self.table[i]:
-            self.table[i].remove(x)
-        
+    def delete(self, ele):
+        i = ele % self.branch
+        if ele in self.table[i]:
+            self.table[i].remove(ele)
 
-    def search(self, x):
-        i = x % self.bucket
-        return x in self.table[i]
+    def search(self, ele):
+        i = ele % self.branch
+        return ele in self.table[i]
 
-ob = Myhash(7)
+    
+ob = hashing(7)
 ob.insert(70)
 ob.insert(71)
 ob.insert(9)
 ob.insert(56)
 ob.insert(72)
 print(ob.search(9))
-ob.remove(9)
+ob.delete(9)
 print(ob.search(9))
-ob.remove(9)
+ob.delete(100)
