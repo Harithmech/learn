@@ -1,4 +1,4 @@
-class hashing:
+class Hashtables:
     def __init__(self, b):
         self.branch = b
         self.table = [[] for i in range(b)]
@@ -14,16 +14,16 @@ class hashing:
 
     def search(self, ele):
         i = ele % self.branch
-        return ele in self.table[i]
+        if ele in self.table[i]:
+            print(True)
+        else:
+            print(False)
 
-    
-ob = hashing(7)
+ob = Hashtables(7)
 ob.insert(70)
 ob.insert(71)
 ob.insert(9)
 ob.insert(56)
 ob.insert(72)
-print(ob.search(9))
-ob.delete(9)
-print(ob.search(9))
-ob.delete(100)
+
+ob.search(100)
