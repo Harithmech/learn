@@ -25,5 +25,7 @@ ob.insert(71)
 ob.insert(9)
 ob.insert(56)
 ob.insert(72)
+ob.insert(72)
 
+ob.search(72)
 ob.search(100)
